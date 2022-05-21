@@ -10,13 +10,13 @@
         margin:0;
       }
       body{
-        background:green;
+        background:linear-gradient(rgba(255,100,0,0.5),rgba(255,0,255,0.5));
         font-size:20px;
       }
       main{
         display:flex;
         justify-content:center;
-        align-items:center;
+        align-items:flex-start;
         max-width:100%;
       }
       article{
@@ -39,6 +39,18 @@
       img{
         max-width:100%;
       }
+      h1{
+        background: black;
+        color:yellow;
+        width:100%;
+        text-align: center;
+      }
+      h2{
+        background: black;
+        color:yellow;
+        width:100%;
+        text-align: center;
+      }
     </style>
   </head>
   <body>
@@ -46,8 +58,8 @@
       <article>
         <div class="langle">
           <fieldset>
-            <legend>langle</legend>
-          <label>Rus</label>
+            <legend>language</legend>
+          <label>English</label>
           <input type="checkbox" id='check'>
         </fieldset>
 
@@ -77,7 +89,7 @@
 
         <p id="ru">1500 рублей - это когда меньше\больше 20 баксов. То есть 20 долларов на месячное проживание. С расценками по которым нельзя купить не только еду, даже комнату снять не выйдет. Для нормального человека это вообще не деньги! Для человека, но не для москвича! Для москвы это деньги. После которого собирают конференцию где людям ищущим работу, высказывают угрозы, о пытках и суровом законе которому плевать на конституцию. Поганая мАсква! Живи ты на свои рубли где нибудь в сторонке от нормальных людей!</p>
         <p id="en">1500 rubles is when less\more than 20 bucks. That is $20 for a month's stay. With prices at which you can’t buy not only food, you won’t even be able to rent a room. For a normal person, this is not money at all! For a person, but not for a Muscovite! For Moscow, this is money. After which they convene a conference where people looking for work are threatened, about torture and a harsh law that does not care about the constitution. Filthy mask! You live on your rubles somewhere away from normal people!</p>
-<img src="nazi.jpg" alt="">
+<img src="nazi.jpg" alt="nazism">
         <p id="ru">Фейсбук может быть заблокирован потому что мАсква заплатила фейсбуку чтобы в стране было только промыв мозгов через поганый вконтакте на пару с деградирующим зомбоящиком. Блокировка комментариев - это проверенная схема национал социалистических преступников третьего рейха. Когда нет никакой свободы, нет мнения, а только угрозы. Как угрозы судами и обвинения в “незаконной трудовой деятельности”. После такой лекции угрожающей расправой, с судом и пытаками. После таких крысиных угроз теряется дар речи. Остаются одни оскорбления, о которых как раз очень красноречиво рассказывали на информативной лекции с незаконной трудовой деятельности. Штраф, за оскорбление должностного лица, когда он национал социалист и преступник третьего рейха. Штраф!</p>
         <p id="en">Facebook can be blocked because Moscow paid Facebook to have only brainwashing in the country through a filthy VKontakte paired with a degrading zomboyaschik. Comment blocking is a tried and tested scheme of the National Socialist criminals of the Third Reich. When there is no freedom, there is no opinion, only threats. Like threats of lawsuits and accusations of “illegal labor activity”. After such a lecture with threatening reprisals, with trial and torture. After such rat threats, the gift of speech is lost. Only insults remain, which were just very eloquently told at an informative lecture from illegal labor activity. A fine for insulting an official when he is a National Socialist and a criminal of the Third Reich. Fine!</p>
 
@@ -96,18 +108,19 @@
         for(let oj=0;oj<=document.querySelectorAll('#en').length;oj++){
           document.querySelectorAll('#en')[oj].style.cssText=`display:none`;
           document.querySelectorAll('#ru')[oj].style.cssText=`display:block`;
-          document.querySelector('body > main > article > div > fieldset > label').innerHTML=`En`;
+          document.querySelector('body > main > article > div > fieldset > label').innerHTML=`Rus`;
         }
     }else{
       console.log('oooo');
       for(let je=0;je<=document.querySelectorAll('#ru').length;je++){
         document.querySelectorAll('#ru')[je].style.cssText=`display:none`;
         document.querySelectorAll('#en')[je].style.cssText=`display:block`;
-  document.querySelector('body > main > article > div > fieldset > label').innerHTML=`Rus`;
+  document.querySelector('body > main > article > div > fieldset > label').innerHTML=`English`;
       }
       document.querySelector('#check').checked=false;
       click=0;
     }
 });
   </script>
+  <script src='https://amir248.github.io/moscow-will-lose-the-war/maxWidth.js'></script>
 </html>
